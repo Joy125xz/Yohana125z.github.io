@@ -1,0 +1,385 @@
+#header {
+    background-color: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d4af37;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav > li {
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s;
+    font-family: 'Cinzel Decorative', cursive;
+    background: linear-gradient(to right, #ffffff, #aaaaaa, #666666);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-radius: 8px;
+}
+
+.nav a:hover {
+    background-color: #333;
+    text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.nav a.active {
+    background: #d4af37 !important; 
+    color: #000 !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+.nav a.active:hover {
+    background: #e6c542 !important;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a1a;
+    color: #e0e0e0;
+    background-image: url('https://images.unsplash.com/photo-1608889825103-eb5a6f5ad50d?q=80&w=1000');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgba(10, 10, 26, 0.8);
+    border-bottom: 3px solid #946b2d;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+    color: #f0c75e;
+    text-shadow: 3px 3px 5px #000;
+    font-family: 'Harry Potter', cursive;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #b3b3b3;
+    margin-top: 10px;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.movie-card {
+    background-color: rgba(20, 20, 40, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #946b2d;
+}
+
+.movie-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.movie-poster {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-bottom: 3px solid #f0c75e;
+}
+
+.movie-info {
+    padding: 20px;
+}
+
+.movie-title {
+    font-size: 1.8rem;
+    margin: 0 0 10px;
+    color: #f0c75e;
+}
+
+.movie-year {
+    font-size: 1rem;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+}
+
+.movie-desc {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.movie-director {
+    font-style: italic;
+    color: #946b2d;
+}
+
+.house-section {
+    background-color: rgba(10, 10, 26, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    border: 1px solid #946b2d;
+}
+
+.house-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #f0c75e;
+    margin-bottom: 30px;
+}
+
+.houses {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.house {
+    width: 200px;
+    text-align: center;
+}
+
+.house-crest {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 5px rgba(240, 199, 94, 0.5));
+}
+
+.house-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #f0c75e;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(10, 10, 26, 0.9);
+    border-top: 3px solid #946b2d;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+}
+
+@font-face {
+    font-family: 'Harry Potter';
+    src: url('https://fonts.cdnfonts.com/css/harry-potter') format('woff2');
+}
+
+
+@media (max-width: 1200px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
+    
+    .movie-poster {
+        height: 350px;
+    }
+    
+    .house-section {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav {
+        gap: 15px;
+    }
+    
+    .nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .movie-poster {
+        height: 320px;
+    }
+    
+    .movie-title {
+        font-size: 1.6rem;
+    }
+    
+    .house {
+        width: 180px;
+    }
+    
+    .house-crest {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    header {
+        padding: 40px 0;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .movie-poster {
+        height: 280px;
+    }
+    
+    .movie-info {
+        padding: 15px;
+    }
+    
+    .movie-title {
+        font-size: 1.4rem;
+    }
+    
+    .house-section {
+        padding: 25px;
+    }
+    
+    .house-title {
+        font-size: 2rem;
+    }
+    
+    .houses {
+        gap: 15px;
+    }
+    
+    .house {
+        width: 150px;
+    }
+    
+    .house-crest {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .house-name {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .nav a {
+        width: 80%;
+        text-align: center;
+    }
+    
+    header {
+        padding: 30px 15px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .movie-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .movie-poster {
+        height: auto;
+        max-height: 500px;
+    }
+    
+    .house-section {
+        padding: 20px 15px;
+    }
+    
+    .house-title {
+        font-size: 1.8rem;
+    }
+    
+    .houses {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .house {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .house-crest {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .footer {
+        padding: 20px 15px;
+    }
+}

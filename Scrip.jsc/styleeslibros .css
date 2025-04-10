@@ -1,0 +1,337 @@
+:root {
+    --gold: #d4af37;
+    --dark: #0a0a0a;
+    --light: #f8f8f8;
+    --hogwarts-blue: #0e1a40;
+    --hogwarts-red: #740001;
+    --parchment: #f5e9d4;
+}
+
+#header {
+    background-color: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d4af37;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav > li {
+    position: relative;
+}
+
+.nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s;
+    font-family: 'Cinzel Decorative', cursive;
+    background: linear-gradient(to right, #ffffff, #aaaaaa, #666666);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-radius: 8px;
+}
+
+.nav a:hover {
+    background-color: #333;
+    text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+.nav a.active {
+    background: #d4af37 !important; 
+    color: #000 !important; 
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+.nav a.active:hover {
+    background: #e6c542 !important;
+}
+
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: var(--dark);
+    color: var(--light);
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    line-height: 1.6;
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.page-title {
+    font-family: 'Cinzel Decorative', 
+    color: var(--gold);
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+
+}
+.page-title:after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 3px;
+    background: var(--gold);
+    margin: 20px auto;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.book-card {
+    background: var(--parchment);
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    border: 8px double var(--gold);
+    border-radius: 5px;
+    padding: 20px;
+    transition: all 0.3s;
+    color: #3a2c1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+
+.book-cover {
+    width: 100%;
+    height: auto;
+    border: 1px solid #3a2c1a;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.book-title {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--hogwarts-red);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed var(--hogwarts-blue);
+    padding-bottom: 5px;
+}
+
+.book-info {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.book-info strong {
+    color: var(--hogwarts-blue);
+}
+
+.book-synopsis {
+    font-style: italic;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.deathly-hallows {
+    background: var(--parchment);
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    border: 8px double var(--gold);
+    border-radius: 5px;
+    padding: 30px;
+    margin: 50px auto;
+    max-width: 900px;
+    color: #3a2c1a;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hallows-title {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--hogwarts-red);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed var(--hogwarts-blue);
+    padding-bottom: 10px;
+}
+
+.hallows-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.hallow-item {
+    flex: 1;
+    min-width: 250px;
+    text-align: center;
+    padding: 20px;
+}
+
+.hallow-icon {
+    font-size: 3rem;
+    color: var(--hogwarts-blue);
+    margin-bottom: 15px;
+}
+
+.hallow-name {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--hogwarts-red);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+footer {
+    background: linear-gradient(135deg, var(--hogwarts-blue) 0%, var(--dark) 100%);
+    color: var(--gold);
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid var(--gold);
+    margin-top: 60px;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        gap: 20px;
+    }
+    
+    .nav a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 25px;
+    }
+    
+    .deathly-hallows {
+        padding: 25px;
+        margin: 40px auto;
+    }
+    
+    .hallows-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .page-title:after {
+        width: 120px;
+    }
+    
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .book-card {
+        padding: 15px;
+    }
+    
+    .deathly-hallows {
+        padding: 20px;
+        margin: 30px 15px;
+    }
+    
+    .hallows-container {
+        gap: 15px;
+    }
+    
+    .hallow-item {
+        min-width: 200px;
+        padding: 15px;
+    }
+    
+    footer {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .nav a {
+        width: 80%;
+        text-align: center;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    
+    .deathly-hallows {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+    
+    .hallows-title {
+        font-size: 1.5rem;
+    }
+    
+    .hallows-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .hallow-item {
+        min-width: 100%;
+    }
+    
+    footer {
+        padding: 20px 10px;
+        margin-top: 40px;
+    }
+    
+    .footer-content p {
+        font-size: 14px;
+    }
+}

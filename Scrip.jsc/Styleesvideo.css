@@ -1,0 +1,397 @@
+#header {
+    background-color: #111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d4af37;
+}
+
+
+.nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav > li {
+    position: relative;
+}
+
+
+.nav a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.3s;
+    font-family: 'Cinzel Decorative', cursive;
+    background: linear-gradient(to right, #ffffff, #aaaaaa, #666666);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    border-radius: 8px;
+}
+
+
+.nav a:hover {
+    background-color: #333;
+    text-shadow: 0 0 5px rgba(255,255,255,0.3);
+}
+
+
+.nav a.active {
+    background: #d4af37 !important; 
+    color: #000 !important; 
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
+}
+
+
+.nav a.active:hover {
+    background: #e6c542 !important;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a1a;
+    color: #f8f6f6;
+    background-image: url('https://i.pinimg.com/originals/73/20/15/7320153c338a2b99ba4806cd750e5f38.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    text-align: center;
+    padding: 60px 0 40px;
+    background: linear-gradient(rgba(10, 10, 26, 0.9), rgba(10, 10, 26, 0.7));
+    border-bottom: 3px solid #755503;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    opacity: 0.2;
+}
+
+h1 {
+    font-size: 4.5rem;
+    margin: 0;
+    color: #d1a22b;
+    text-shadow: 3px 3px 5px #000, 0 0 20px #573b12;
+    font-family: 'Harry Potter', cursive;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #bd9090, 0 0 10px #fff, 0 0 15px #f0c75e, 0 0 20px #f0c75e;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #f0c75e, 0 0 40px #f0c75e;
+    }
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #b3b3b3;
+    margin-top: 15px;
+    text-shadow: 1px 1px 3px #000;
+    position: relative;
+    z-index: 1;
+}
+
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.game-card {
+    background: linear-gradient(145deg, rgba(20, 20, 40, 0.95), rgba(40, 40, 70, 0.9));
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transition: all 0.4s ease;
+    border: 1px solid #946b2d;
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 20px rgba(240, 199, 94, 0.3);
+    border-color: #f0c75e;
+}
+
+.game-cover {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid #f0c75e;
+    transition: transform 0.5s;
+}
+
+.game-card:hover .game-cover {
+    transform: scale(1.05);
+}
+
+.game-info {
+    padding: 25px;
+    position: relative;
+}
+
+.game-title {
+    font-size: 1.9rem;
+    margin: 0 0 12px;
+    color: #f0c75e;
+    text-shadow: 1px 1px 3px #000;
+    font-family: 'Harry Potter', cursive;
+    letter-spacing: 1px;
+}
+
+.game-year {
+    font-size: 1.1rem;
+    color: #b3b3b3;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: rgba(10, 10, 26, 0.7);
+    padding: 3px 10px;
+    border-radius: 15px;
+    border: 1px solid #946b2d;
+}
+
+.game-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 80px;
+}
+
+.game-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.platform {
+    background: linear-gradient(to right, #946b2d, #b8860b);
+    color: #0a0a1a;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.game-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+.btn i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #f0c75e, #e6b422);
+    color: #0a0a1a;
+    box-shadow: 0 4px 8px rgba(240, 199, 94, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #e6b422, #f0c75e);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(240, 199, 94, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(58, 58, 90, 0.7);
+    color: #f0c75e;
+    border: 1px solid #f0c75e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:hover {
+    background: rgba(74, 74, 110, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(240, 199, 94, 0.2);
+}
+
+/* Sección de videos */
+.video-section {
+    background: rgba(10, 10, 26, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    border: 1px solid #946b2d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #f0c75e;
+    margin: 60px 0 30px;
+    text-align: center;
+    border-bottom: 2px solid #946b2d;
+    padding-bottom: 15px;
+    font-family: 'Harry Potter', cursive;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px #000;
+    position: relative;
+}
+
+.section-title::after {
+    content: "⚡";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.section-title::before {
+    content: "⚡";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #946b2d;
+    transition: all 0.3s;
+}
+
+.video-container:hover {
+    border-color: #f0c75e;
+    box-shadow: 0 10px 25px rgba(240, 199, 94, 0.3);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-caption {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #f0c75e;
+}
+
+/* Footer mágico */
+.footer {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(rgba(10, 10, 26, 0.95), rgba(20, 20, 40, 0.9));
+    border-top: 3px solid #946b2d;
+    font-size: 1rem;
+    color: #b3b3b3;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    opacity: 0.1;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #f0c75e;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #f0c75e;
+}
+
+
+@font-face {
+    font-family: 'Harry Potter';
+    src: url('https://fonts.cdnfonts.com/css/harry-potter') format('woff2');
+}
+
+.magic-sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #f0c75e;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle 1s ease-out forwards;
+    z-index: 100;
+}

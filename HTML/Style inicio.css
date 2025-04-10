@@ -1,0 +1,273 @@
+:root {
+    --gold: #d4af37;
+    --dark: #0a0a0a;
+    --light: #f8f8f8;
+    --hogwarts-blue: #0e1a40;
+    --hogwarts-red: #740001;
+    --parchment: #f5e9d4;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    background-color: var(--dark);
+    color: var(--light);
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png');
+    line-height: 1.6;
+  }
+
+  #harryPotterMusic {
+    display: none;
+  }
+
+  #header {
+    background: linear-gradient(135deg, var(--hogwarts-blue) 0%, var(--dark) 100%);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  .logo {
+    width: 60px;       
+    height: 60px;
+    object-fit: cover;  
+    border-radius: 50%; 
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+  
+  
+
+  .nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav li {
+    display: inline;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav > li {
+    position: relative;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: var(--light);
+    padding: 12px 18px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    background: linear-gradient(to right, #ffffff, #aaaaaa, #666666, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .nav a:hover {
+    text-shadow: 0 0 5px var(--gold);
+  }
+  
+
+  h1, h2, h3 {
+    font-family: 'Cinzel Decorative', cursive;
+    background: linear-gradient(to right, #ffffff, #dddddd, #aaaaaa, #888888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+  }
+  
+  h1.welcome {
+    font-size: 3rem;
+    margin: 2rem 0;
+    letter-spacing: 3px;
+    position: relative;
+  }
+  
+  h1.welcome:after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 20px auto;
+  }
+  
+ 
+  .about-hogwarts {
+    position: relative;
+    padding: 100px 20px;
+    margin: 40px 0;
+    background: 
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url('https://i.pinimg.com/736x/73/dc/11/73dc11ac4e40c4f0cb963a706a5faefd.jpg') center/cover no-repeat;
+    color: var(--light);
+    text-align: center;
+    border-top: 3px solid var(--gold);
+    border-bottom: 3px solid var(--gold);
+  }
+  
+
+  .more-from-hogwarts,
+  .courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
+  .more, .subject {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .more:hover, .subject:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+  }
+  
+ 
+  .more img, .subject img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid var(--gold);
+    transition: transform 0.5s;
+  }
+  
+  .more:hover img, .subject:hover img {
+    transform: scale(1.05);
+  }
+  
+  footer {
+    background: linear-gradient(135deg, var(--hogwarts-blue) 0%, var(--dark) 100%);
+    color: var(--gold);
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 2px solid var(--gold);
+    margin-top: 60px;
+  }
+
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    .nav {
+      gap: 15px;
+    }
+    
+    .nav a {
+      padding: 10px 15px;
+      font-size: 1rem;
+    }
+    
+    h1.welcome {
+      font-size: 2.5rem;
+    }
+    
+    .more-from-hogwarts,
+    .courses {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0 10px;
+    }
+    
+    .nav a {
+      padding: 8px 12px;
+      font-size: 0.9rem;
+    }
+    
+    h1.welcome {
+      font-size: 2rem;
+      margin: 1.5rem 0;
+    }
+    
+    .about-hogwarts {
+      padding: 70px 15px;
+    }
+    
+    .more-from-hogwarts,
+    .courses {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 15px;
+    }
+    
+    .more, .subject {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .nav a {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+    
+    h1.welcome {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+    
+    h1.welcome:after {
+      width: 100px;
+    }
+    
+    .about-hogwarts {
+      padding: 50px 10px;
+    }
+    
+    .more-from-hogwarts,
+    .courses {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+    
+    footer {
+      padding: 20px 10px;
+    }
+    
+    .footer-content p {
+      font-size: 14px;
+    }
+  }

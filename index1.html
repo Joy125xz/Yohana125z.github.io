@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Harry Potter</title>
+    <link rel="stylesheet" href="styles quiz.css">
+    <script src="js/script quiz.js"></script> 
+
+</head>
+
+
+<div class="houses-in-hogwarts show-display">
+    <div class="container-for-sort">
+      <div class="sorting-hat">
+        <h1>Descubre tu casa en Hogwarts</h1>
+        <button class="sort-btn">¡QUE TE CLASIFIQUEN!</button>
+      </div>
+      <div class="sorting" id="sorting-quiz">
+        <div class="overlay close-quiz"></div>
+        <div class="quiz-container">
+          <span class="close-ico close-quiz"><i class="fa-solid fa-circle-xmark"></i></span>
+          <div class="questions">
+            <div class="quiz">
+              <p>1 ¿De qué habilidad te sientes más orgulloso?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="one" id="one-one" value="10">
+                  <label for="one-one"><i class="fa-solid fa-star"></i>1) Absorber nueva información</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="one" id="one-two" value="20">
+                  <label for="one-two"><i class="fa-solid fa-star"></i>2) Hacer nuevos amigos</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="one" id="one-three" value="40">
+                  <label for="one-three"><i class="fa-solid fa-star"></i>3) Conseguir lo que quiero</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="one" id="one-four" value="30">
+                  <label for="one-four"><i class="fa-solid fa-star"></i>4) Mantener secretos</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>2) ¿Qué te gusta hacer más en tu tiempo libre?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="two" id="two-one" value="20">
+                  <label for="two-one"><i class="fa-solid fa-star"></i>1) Leer un libro</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="two" id="two-two" value="10">
+                  <label for="two-two"><i class="fa-solid fa-star"></i>2) Ayudar a alguien con su tarea</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="two" id="two-three" value="40">
+                  <label for="two-three"><i class="fa-solid fa-star"></i>3) Burlarme de alguien</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="two" id="two-four" value="30">
+                  <label for="two-four"><i class="fa-solid fa-star"></i>4) Relajarme</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>3) ¿Cómo describirías tu círculo de amigos?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="three" id="three-one" value="30">
+                  <label for="three-one"><i class="fa-solid fa-star"></i> Grande porque mucha gente me conoce</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="three" id="three-two" value="10">
+                  <label for="three-two"><i class="fa-solid fa-star"></i>2) No muy grande, pero tampoco pequeño</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="three" id="three-three" value="40">
+                  <label for="three-three"><i class="fa-solid fa-star"></i>3) Solo salgo con un número limitado de amigos</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="three" id="three-four" value="20">
+                  <label for="three-four"><i class="fa-solid fa-star"></i>4) Me gusta estar solo</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>4) ¿Qué tipo de casa te gustaría tener?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="four" id="four-one" value="40">
+                  <label for="four-one"><i class="fa-solid fa-star"></i>1) Una mansión</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="four" id="four-two" value="30">
+                  <label for="four-two"><i class="fa-solid fa-star"></i>2) Un gran bungalow con chimenea</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="four" id="four-three" value="10">
+                  <label for="four-three"><i class="fa-solid fa-star"></i>3) No importa mientras sea cómodo</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="four" id="four-four" value="20">
+                  <label for="four-four"><i class="fa-solid fa-star"></i>4) Una casa razonable con todas mis necesidades</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>5) Si hicieras un desorden, ¿qué harías al respecto?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="five" id="five-one" value="30">
+                  <label for="five-one"><i class="fa-solid fa-star"></i> Admitirlo de inmediato, disculparme y limpiarlo</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="five" id="five-two" value="40">
+                  <label for="five-two"><i class="fa-solid fa-star"></i>2) Dejarlo ahí y escabullirme</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="five" id="five-three" value="20">
+                  <label for="five-three"><i class="fa-solid fa-star"></i>3) Limpiarlo rápidamente para que nadie se entere</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="" id="five-four" value="10">
+                  <label for="five-four"><i class="fa-solid fa-star"></i>4) Llamar a mis amigos y arreglarlo con su ayuda</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>6 ¿Cómo te describirían las personas que conoces?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="six" id="six-one" value="20">
+                  <label for="six-one"><i class="fa-solid fa-star"></i>1) Inteligente</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="six" id="six-two" value="30">
+                  <label for="six-two"><i class="fa-solid fa-star"></i>2) Interesado en todo</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="six" id="six-three" value="40">
+                  <label for="six-three"><i class="fa-solid fa-star"></i>3) Bully</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="six" id="six-four" value="10">
+                  <label for="six-four"><i class="fa-solid fa-star"></i>4) Normal</label>
+                </div>
+              </div>
+            </div>
+            <p>7) ¿Qué es más importante para ti?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="seven" id="seven-one" value="30">
+                  <label for="seven-one"><i class="fa-solid fa-star"></i>1) Libertad</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="seven" id="seven-two" value="10">
+                  <label for="seven-two"><i class="fa-solid fa-star"></i>2) Familia</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="seven" id="seven-three" value="40">
+                  <label for="seven-three"><i class="fa-solid fa-star"></i>3) Poder</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="seven" id="seven-four" value="20">
+                  <label for="seven-four"><i class="fa-solid fa-star"></i>4) Amigos</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>8) En tus vacaciones de verano de Hogwarts, ¿qué harías?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="eight" id="eight-one" value="40">
+                  <label for="eight-one"><i class="fa-solid fa-star"></i>1) Fiesta</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="eight" id="eight-two" value="20">
+                  <label for="eight-two"><i class="fa-solid fa-star"></i>2) Ayudar en casa</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="eight" id="eight-three" value="10">
+                  <label for="eight-three"><i class="fa-solid fa-star"></i>3) Estudiar para el próximo año</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="eight" id="eight-four" value="30">
+                  <label for="eight-four"><i class="fa-solid fa-star"></i>4) Practicar magia</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>9) ¿Qué harías si un ladrón entrara en tu casa?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="nine" id="nine-one" value="40">
+                  <label for="nine-one"><i class="fa-solid fa-star"></i>1) Lucharía contra él</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="nine" id="nine-two" value="20">
+                  <label for="nine-two"><i class="fa-solid fa-star"></i>2) Me escondería</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="nine" id="nine-three" value="10">
+                  <label for="nine-three"><i class="fa-solid fa-star"></i>3) Obedecería al ladrón</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="nine" id="nine-four" value="30">
+                  <label for="nine-four"><i class="fa-solid fa-star"></i>4) Me escondería</label>
+                </div>
+              </div>
+            </div>
+            <div class="quiz">
+              <p>10) Si fueras un mago y vieras a un animal herido, ¿qué harías?</p>
+              <div class="quiz-options">
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="ten" id="ten-one" value="40">
+                  <label for="ten-one"><i class="fa-solid fa-star"></i>1) Lo sanaría aunque sea un mago inexperto</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="ten" id="ten-two" value="20">
+                  <label for="ten-two"><i class="fa-solid fa-star"></i>2) Correría</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="ten" id="ten-three" value="30">
+                  <label for="ten-three"><i class="fa-solid fa-star"></i>3) Llamaría a un mago más experimentado</label>
+                </div>
+                <div class="option">
+                  <input class="quiz-input" type="radio" name="ten" id="ten-four" value="10">
+                  <label for="ten-four"><i class="fa-solid fa-star"></i>4) No sabría qué hacer</label>
+                </div>
+              </div>
+            </div>
+            <button class="btn sort-submit">¡QUE TE CLASIFIQUEN!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="house-container"></div>
+  </div>
+  
+ 
+  
+  

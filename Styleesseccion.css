@@ -1,0 +1,75 @@
+{
+    box-sizing: border-box;
+  }
+
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://i.blogs.es/603a33/layer-14/840_560.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px; /* Espacio arriba y abajo */
+    color: #FFD700;
+  }
+
+  .wrapper {
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #FFD700;
+  }
+
+  h1 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #FFD700;
+  }
+
+  .input-group {
+    margin-bottom: 18px;
+    text-align: left;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #FFD700;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #e6c200;
+  }
